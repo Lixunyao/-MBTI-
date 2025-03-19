@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="progress">
+    <view class="progress-text">{{currentQuestion}}/{{totalQuestions}}</view>
+    <progress percent="{{(currentQuestion/totalQuestions) * 100}}" stroke-width="4" color="#6ECEDA" />
+  </view>
+
+
+  <view class="question-card card">
+    <view class="question-text">{{currentQuestionData.text}}</view>
+    <view class="options">
+      <view
+        class="option"
+        wx:for="{{currentQuestionData.options}}"
+        wx:key="value"
+        data-value="{{item.value}}"
+        bindtap="onSelectOption"
+      >
+        <text class="option-label">{{item.value}}</text>
+        <text class="option-text">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+    <!-- 生成报告按钮和上一题按钮的容器 -->
+    <view class="nav-buttons">
+      <view class="btn-prev" wx:if="{{currentQuestion > 1 && !isAllQuestionsAnswered}}" bindtap="loadPreviousQuestion">上一题</view>
+      <view class="btn-generate" wx:if="{{isAllQuestionsAnswered}}" bindtap="generateResult">生成完整报告</view>
+    </view>
+</view>

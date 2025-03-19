@@ -1,0 +1,342 @@
+.container {
+  padding: 40rpx 30rpx;
+  background-color: #F8F8F8;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-bottom: 16rpx;
+  border: 2rpx solid #6ECEDA;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.nickname {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 结果容器样式优化 */
+.result-container {
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+  margin-bottom: 20rpx;
+}
+
+.result-type {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 16rpx;
+}
+
+.result-desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+/* 百分比容器样式优化 */
+.percentages-container {
+  margin: 30rpx 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.dimension-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.dimension {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+
+.dimension text:first-child {
+  width: 36rpx;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.dimension progress {
+  flex: 1;
+  margin: 0 10rpx;
+  border-radius: 4rpx;
+}
+
+.dimension text:last-child {
+  width: auto;
+  font-size: 24rpx;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* 性格解读和最佳匹配样式优化 */
+.personality-analysis, .best-match {
+  margin: 24rpx 0;
+  padding: 24rpx;
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.section-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+}
+
+.analysis-content, .match-content {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.match-type {
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #6ECEDA;
+  margin-bottom: 12rpx;
+}
+
+.result-date {
+  font-size: 22rpx;
+  color: #999;
+  text-align: right;
+  margin-top: 16rpx;
+}
+
+/* 无结果样式优化 */
+.no-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 0;
+  background-color: #FFFFFF;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.05);
+}
+
+.no-result text {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 24rpx;
+}
+
+.btn-test {
+  background-color: #6ECEDA;
+  color: white;
+  border-radius: 30rpx;
+  padding: 12rpx 36rpx;
+  font-size: 26rpx;
+  box-shadow: 0 2rpx 6rpx rgba(110, 206, 218, 0.3);
+}
+
+.test-result {
+  padding: 20rpx 0;
+}
+
+.result-type {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #6ECEDA;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.result-desc {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 20rpx;
+}
+
+.result-date {
+  font-size: 24rpx;
+  color: #999;
+  text-align: right;
+}
+
+.footer {
+  margin-top: 60rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+
+
+.percentages-container {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.dimension-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.dimension {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+
+.dimension text {
+  width: 40rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dimension progress {
+  flex: 1;
+  margin: 0 10rpx;
+}
+
+.percentages-container {
+  margin: 20rpx 0;
+  padding: 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.dimension-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.dimension {
+  display: flex;
+  align-items: center;
+  width: 48%;
+}
+
+.dimension text {
+  width: 40rpx;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dimension progress {
+  flex: 1;
+  margin: 0 10rpx;
+}
+
+
+/* 现有样式 */
+
+/* 新增样式 */
+.personality-analysis, .best-match {
+  margin: 30rpx 0;
+  padding: 30rpx;
+  background-color: #FFF9E6;
+  border-radius: 15rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.section-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.analysis-content, .match-content {
+  font-size: 28rpx;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.match-type {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #6ECEDA;
+  margin-bottom: 15rpx;
+}
+
+/* 修改百分比显示样式 */
+.dimension text:last-child {
+  width: auto;
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 现有样式 */
+.section-image {
+  width: 100%;
+  margin: 10rpx 0 20rpx 0;
+  border-radius: 10rpx;
+}
+
+.download-btn {
+  width: 85%;
+  height: 88rpx;
+  margin: 40rpx auto;
+  background: #6ECEDA;
+  color: #FFFFFF;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 12rpx rgba(110, 206, 218, 0.3);
+}
+
+.download-btn::after {
+  border: none;
+}
+
+.btn-icon {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 12rpx;
+}
+
+.download-btn:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}

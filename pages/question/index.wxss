@@ -1,0 +1,97 @@
+.container {
+  padding: 40rpx 0;
+}
+
+.progress {
+  width: 90%;
+  margin: 0 auto 40rpx;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+}
+
+.question-card {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.question-text {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 60rpx;
+  text-align: left; /* 添加左对齐 */
+  padding: 0 30rpx; /* 添加左右内边距 */
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #F8F8F8;
+  border-radius: 10rpx;
+  transition: all 0.3s;
+}
+
+.option:active {
+  background-color: #E0F4F6;
+}
+
+.option-label {
+  width: 60rpx;
+  height: 60rpx;
+  background-color: #6ECEDA;
+  color: white;
+  border-radius: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  margin-right: 20rpx;
+}
+
+.option-text {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.nav-buttons {
+  width: 85%;
+  margin: 40rpx auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-prev, .btn-generate {
+  width: 100%;
+  height: 88rpx;
+  background-color: #6ECEDA;
+  color: white;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 12rpx rgba(110, 206, 218, 0.3);
+}
+
+.btn-prev:active, .btn-generate:active {
+  opacity: 0.8;
+}
+
+.generate-tip {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 20rpx;
+  text-align: center;
+}

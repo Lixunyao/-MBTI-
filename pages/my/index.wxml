@@ -1,0 +1,112 @@
+<!-- my/index.wxml -->
+<view class="container">
+  <view class="user-info">
+    <image class="avatar" src="/images/default-avatar.png" mode="aspectFill"></image>
+    <view class="nickname">铲屎官</view>
+  </view>
+
+  <view class="result-container" wx:if="{{hasResult}}">
+    <view class="result-type">{{result.type}}</view>
+    <view class="result-desc">{{result.title}}</view>
+    
+    <!-- 百分比显示部分 -->
+    <view class="percentages-container">
+      <view class="dimension-row">
+        <view class="dimension">
+          <text>E</text>
+          <progress percent="{{percentages.E}}" stroke-width="4" color="#FF6B6B" />
+          <text>{{percentages.E}}% {{personalityTraits.E}}</text>
+        </view>
+        <view class="dimension">
+          <text>I</text>
+          <progress percent="{{percentages.I}}" stroke-width="4" color="#4ECDC4" />
+          <text>{{percentages.I}}% {{personalityTraits.I}}</text>
+        </view>
+      </view>
+      
+      <view class="dimension-row">
+        <view class="dimension">
+          <text>S</text>
+          <progress percent="{{percentages.S}}" stroke-width="4" color="#FFD166" />
+          <text>{{percentages.S}}% {{personalityTraits.S}}</text>
+        </view>
+        <view class="dimension">
+          <text>N</text>
+          <progress percent="{{percentages.N}}" stroke-width="4" color="#6B5CA5" />
+          <text>{{percentages.N}}% {{personalityTraits.N}}</text>
+        </view>
+      </view>
+      
+      <view class="dimension-row">
+        <view class="dimension">
+          <text>T</text>
+          <progress percent="{{percentages.T}}" stroke-width="4" color="#072AC8" />
+          <text>{{percentages.T}}% {{personalityTraits.T}}</text>
+        </view>
+        <view class="dimension">
+          <text>F</text>
+          <progress percent="{{percentages.F}}" stroke-width="4" color="#FFA69E" />
+          <text>{{percentages.F}}% {{personalityTraits.F}}</text>
+        </view>
+      </view>
+      
+      <view class="dimension-row">
+        <view class="dimension">
+          <text>J</text>
+          <progress percent="{{percentages.J}}" stroke-width="4" color="#43AA8B" />
+          <text>{{percentages.J}}% {{personalityTraits.J}}</text>
+        </view>
+        <view class="dimension">
+          <text>P</text>
+          <progress percent="{{percentages.P}}" stroke-width="4" color="#F9C80E" />
+          <text>{{percentages.P}}% {{personalityTraits.P}}</text>
+        </view>
+      </view>
+    </view>
+    
+    <!-- 性格解读部分 -->
+    <view class="personality-analysis">
+      <view class="section-title">
+        <image src="/images/analysis.png" mode="aspectFit" class="section-icon"></image>
+        <text>性格解读</text>
+      </view>
+      <view class="analysis-content">
+        {{mockDescription }}
+      </view>
+    </view>
+    
+    <!-- 最佳CP铲屎官部分 -->
+    <view class="best-match">
+      <view class="section-title">
+        <image src="/images/match.png" mode="aspectFit" class="section-icon"></image>
+        <text>最佳CP铲屎官</text>
+      </view>
+      <view class="match-type">{{cpType}}</view>
+      <view class="match-content">
+        {{mockCpOwner}}
+      </view>
+    </view>
+    
+    <!-- 在result-date后面添加下载按钮 -->
+    <view class="result-date">测试日期: {{result.date}}</view>
+    
+    <!-- 添加下载按钮 -->
+    <button class="download-btn" bindtap="downloadReport">
+      <image class="btn-icon" src="/images/download.png" mode="aspectFit"></image>
+      保存报告
+    </button>
+  </view>
+
+  <view class="no-result" wx:else>
+    <text>您的宠物还没有进行MBTI测试</text>
+    <navigator url="/pages/index/index" open-type="switchTab" class="btn-test">去测试</navigator>
+  </view>
+</view>
+
+<!-- 用于生成图片的隐藏容器 -->
+<!-- 修改为新版 Canvas 类型 -->
+<canvas 
+  type="2d"
+  id="reportCanvas" 
+  style="width: 750px; height: 1800px; position: fixed; top: -9999px;"
+></canvas>
